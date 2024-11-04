@@ -10,4 +10,6 @@ package Controlador;
  */
 public class crtlRegistro {
     
+  
+    
 }

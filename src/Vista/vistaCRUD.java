@@ -28,20 +28,26 @@ public class vistaCRUD extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox<>();
-        jComboBox2 = new javax.swing.JComboBox<>();
-        jComboBox3 = new javax.swing.JComboBox<>();
-        txtCorreoLogin = new javax.swing.JTextField();
-        txtContraLogin = new javax.swing.JTextField();
+        btnAgregar = new com.k33ptoo.components.KButton();
+        btnActualizar = new com.k33ptoo.components.KButton();
+        btnEliminar = new com.k33ptoo.components.KButton();
+        btnLimpiar = new com.k33ptoo.components.KButton();
+        txtModelo = new javax.swing.JTextField();
+        txtApellidoCliente = new javax.swing.JTextField();
+        txtMarca = new javax.swing.JTextField();
+        txtTelefonoCliente = new javax.swing.JTextField();
+        txtEstadoVehiculo = new javax.swing.JTextField();
+        txtNombreCliente = new javax.swing.JTextField();
+        txtAno = new javax.swing.JTextField();
+        txtproblemVehiculo = new javax.swing.JTextField();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
-        jLabel5 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -51,23 +57,76 @@ public class vistaCRUD extends javax.swing.JFrame {
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 28)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(24, 64, 118));
-        jLabel1.setText("Agregar Vehículo");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 80, -1, -1));
+        jLabel1.setText("Mecanica");
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 70, -1, -1));
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        jPanel1.add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 300, 130, 40));
+        btnAgregar.setText("Agregar");
+        btnAgregar.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        btnAgregar.setkBackGroundColor(new java.awt.Color(60, 168, 131));
+        btnAgregar.setkEndColor(new java.awt.Color(96, 229, 162));
+        btnAgregar.setkHoverEndColor(new java.awt.Color(96, 229, 162));
+        btnAgregar.setkHoverForeGround(new java.awt.Color(60, 168, 131));
+        btnAgregar.setkHoverStartColor(new java.awt.Color(60, 168, 131));
+        btnAgregar.setkSelectedColor(new java.awt.Color(96, 229, 162));
+        btnAgregar.setkStartColor(new java.awt.Color(60, 168, 131));
+        jPanel1.add(btnAgregar, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 90, 150, -1));
 
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        jPanel1.add(jComboBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 140, 130, 40));
+        btnActualizar.setText("Actualizar");
+        btnActualizar.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        btnActualizar.setkBackGroundColor(new java.awt.Color(0, 90, 163));
+        btnActualizar.setkEndColor(new java.awt.Color(93, 204, 255));
+        btnActualizar.setkHoverEndColor(new java.awt.Color(93, 204, 255));
+        btnActualizar.setkHoverForeGround(new java.awt.Color(0, 90, 163));
+        btnActualizar.setkHoverStartColor(new java.awt.Color(0, 90, 163));
+        btnActualizar.setkSelectedColor(new java.awt.Color(93, 204, 255));
+        btnActualizar.setkStartColor(new java.awt.Color(0, 90, 163));
+        jPanel1.add(btnActualizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 160, 150, -1));
 
-        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        jPanel1.add(jComboBox3, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 250, 130, 40));
+        btnEliminar.setText("Eliminar");
+        btnEliminar.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        btnEliminar.setkBackGroundColor(new java.awt.Color(176, 7, 96));
+        btnEliminar.setkEndColor(new java.awt.Color(229, 86, 96));
+        btnEliminar.setkHoverEndColor(new java.awt.Color(229, 86, 96));
+        btnEliminar.setkHoverForeGround(new java.awt.Color(176, 7, 96));
+        btnEliminar.setkHoverStartColor(new java.awt.Color(176, 7, 96));
+        btnEliminar.setkSelectedColor(new java.awt.Color(229, 86, 96));
+        btnEliminar.setkStartColor(new java.awt.Color(168, 0, 54));
+        jPanel1.add(btnEliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 230, 150, -1));
 
-        txtCorreoLogin.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Teléfono", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(153, 153, 153))); // NOI18N
-        jPanel1.add(txtCorreoLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 190, 130, 50));
+        btnLimpiar.setText("Limpiar");
+        btnLimpiar.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        btnLimpiar.setkBackGroundColor(new java.awt.Color(19, 38, 161));
+        btnLimpiar.setkEndColor(new java.awt.Color(60, 26, 174));
+        btnLimpiar.setkHoverEndColor(new java.awt.Color(60, 26, 174));
+        btnLimpiar.setkHoverForeGround(new java.awt.Color(0, 90, 163));
+        btnLimpiar.setkHoverStartColor(new java.awt.Color(0, 90, 163));
+        btnLimpiar.setkSelectedColor(new java.awt.Color(60, 26, 174));
+        btnLimpiar.setkStartColor(new java.awt.Color(0, 90, 163));
+        jPanel1.add(btnLimpiar, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 290, 150, -1));
 
-        txtContraLogin.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Año ", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(153, 153, 153))); // NOI18N
-        jPanel1.add(txtContraLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 130, 130, 50));
+        txtModelo.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Modelo", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(153, 153, 153))); // NOI18N
+        jPanel1.add(txtModelo, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 120, 170, 50));
+
+        txtApellidoCliente.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Apellido", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(153, 153, 153))); // NOI18N
+        jPanel1.add(txtApellidoCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 180, 170, 50));
+
+        txtMarca.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Marca", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(153, 153, 153))); // NOI18N
+        jPanel1.add(txtMarca, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 300, 170, 50));
+
+        txtTelefonoCliente.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Teléfono", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(153, 153, 153))); // NOI18N
+        jPanel1.add(txtTelefonoCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 240, 170, 50));
+
+        txtEstadoVehiculo.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Estado del vehículo", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(153, 153, 153))); // NOI18N
+        jPanel1.add(txtEstadoVehiculo, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 300, 170, 50));
+
+        txtNombreCliente.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Nombre", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(153, 153, 153))); // NOI18N
+        jPanel1.add(txtNombreCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 120, 170, 50));
+
+        txtAno.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Año ", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(153, 153, 153))); // NOI18N
+        jPanel1.add(txtAno, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 180, 170, 50));
+
+        txtproblemVehiculo.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Problema del vehículo", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(153, 153, 153))); // NOI18N
+        jPanel1.add(txtproblemVehiculo, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 240, 170, 50));
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -82,16 +141,16 @@ public class vistaCRUD extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(jTable1);
 
-        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 50, 410, 340));
-
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Rectangle 118.png"))); // NOI18N
-        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 50, 230, 350));
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 410, 770, 210));
 
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Rectangle 118.png"))); // NOI18N
-        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 50, 340, 350));
+        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 40, 340, 350));
 
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Rectangle 118.png"))); // NOI18N
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 50, 340, 350));
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Rectangle 118.png"))); // NOI18N
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 40, 230, 350));
+
+        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Rectangle 118.png"))); // NOI18N
+        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 40, 240, 350));
 
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/degradadoCircular.png"))); // NOI18N
         jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, -30, 610, 410));
@@ -102,10 +161,7 @@ public class vistaCRUD extends javax.swing.JFrame {
         jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/degradoFondo.png"))); // NOI18N
         jPanel1.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(-50, 130, 440, 390));
 
-        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Rectangle 118.png"))); // NOI18N
-        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 50, 340, 350));
-
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-11, -5, 840, 460));
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-11, -5, 840, 670));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -146,13 +202,13 @@ public class vistaCRUD extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JComboBox<String> jComboBox1;
-    private javax.swing.JComboBox<String> jComboBox2;
-    private javax.swing.JComboBox<String> jComboBox3;
+    public com.k33ptoo.components.KButton btnActualizar;
+    public com.k33ptoo.components.KButton btnAgregar;
+    public com.k33ptoo.components.KButton btnEliminar;
+    public com.k33ptoo.components.KButton btnLimpiar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
@@ -160,7 +216,13 @@ public class vistaCRUD extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;
-    public javax.swing.JTextField txtContraLogin;
-    public javax.swing.JTextField txtCorreoLogin;
+    public javax.swing.JTextField txtAno;
+    public javax.swing.JTextField txtApellidoCliente;
+    public javax.swing.JTextField txtEstadoVehiculo;
+    public javax.swing.JTextField txtMarca;
+    public javax.swing.JTextField txtModelo;
+    public javax.swing.JTextField txtNombreCliente;
+    public javax.swing.JTextField txtTelefonoCliente;
+    public javax.swing.JTextField txtproblemVehiculo;
     // End of variables declaration//GEN-END:variables
 }
