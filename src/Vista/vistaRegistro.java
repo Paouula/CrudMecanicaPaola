@@ -61,7 +61,7 @@ public class vistaRegistro extends javax.swing.JFrame {
         btnRegistrar.setkHoverStartColor(new java.awt.Color(0, 90, 163));
         btnRegistrar.setkSelectedColor(new java.awt.Color(93, 204, 255));
         btnRegistrar.setkStartColor(new java.awt.Color(0, 90, 163));
-        jPanel1.add(btnRegistrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 330, 140, -1));
+        jPanel1.add(btnRegistrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 330, 140, -1));
 
         jLabel9.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(255, 255, 255));
