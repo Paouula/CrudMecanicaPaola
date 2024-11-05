@@ -1,31 +1,38 @@
-create table tb_Usuario(
-    UUID_Usuario int PRIMARY KEY,
-    nombre_usuario VARCHAR2(50) not null,
-    apellido_usuario VARCHAR2(50) not null,
-    correo_usuario VARCHAR2(50) not null,
-    contra_usuario VARCHAR2(50) not null,
-    edad_usuario int not null
+CREATE TABLE tb_Usuario (
+    UUID_Usuario NUMBER PRIMARY KEY,
+    nombre_usuario VARCHAR2(50) NOT NULL,
+    apellido_usuario VARCHAR2(50) NOT NULL,
+    correo_usuario VARCHAR2(50) NOT NULL,
+    contra_usuario VARCHAR2(50) NOT NULL,
+    edad_usuario NUMBER NOT NULL
 );
 
-create table tb_Cliente(
-    UUID_Cliente int PRIMARY KEY,
-    nombre_cliente VARCHAR2(50) not null,
-    apellido_cliente VARCHAR2(50) not null,
-    telefono_cliente int not null
+CREATE TABLE tb_Cliente (
+    UUID_Cliente NUMBER PRIMARY KEY,
+    nombre_cliente VARCHAR2(50) NOT NULL,
+    apellido_cliente VARCHAR2(50) NOT NULL,
+    telefono_cliente VARCHAR2(15) NOT NULL 
 );
 
-create table tb_infoVehiculo(
-    UUID_VEHICULO int PRIMARY KEY,
-    marca VARCHAR2(50) not null,
-    modelo VARCHAR2(50) not null,
-    ano_vehiculo int
+CREATE TABLE tb_infoVehiculo (
+    UUID_VEHICULO NUMBER PRIMARY KEY,
+    marca VARCHAR2(50) NOT NULL,
+    modelo VARCHAR2(50) NOT NULL,
+    ano_vehiculo NUMBER 
 );
 
-create table tb_repaVehiculo(
-    uuid_repaVehiculo varchar2(50) primary key,
-    problemas_vehiculos VARCHAR2(500) not null,
+CREATE TABLE tb_repaVehiculo (
+    uuid_repaVehiculo VARCHAR2(50) PRIMARY KEY,
+    problemas_vehiculos VARCHAR2(500) NOT NULL,
     estado_prob_vehiculo VARCHAR2(50),
-    uuid_cliente INT,
+    uuid_cliente NUMBER, 
+    UUID_VEHICULO NUMBER, 
+    CONSTRAINT fk_tb_Cliente FOREIGN KEY (uuid_cliente)
+    REFERENCES tb_Cliente(UUID_Cliente),
+    CONSTRAINT fk_tb_infoVehiculo FOREIGN KEY (UUID_VEHICULO)
+    REFERENCES tb_infoVehiculo(UUID_VEHICULO)
+);
+id_cliente INT,
     CONSTRAINT fk_tb_Cliente
     FOREIGN KEY (uuid_cliente)
     REFERENCES tb_cliente(uuid_cliente),
