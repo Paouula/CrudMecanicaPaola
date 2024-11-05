@@ -32,12 +32,3 @@ CREATE TABLE tb_repaVehiculo (
     CONSTRAINT fk_tb_infoVehiculo FOREIGN KEY (UUID_VEHICULO)
     REFERENCES tb_infoVehiculo(UUID_VEHICULO)
 );
-id_cliente INT,
-    CONSTRAINT fk_tb_Cliente
-    FOREIGN KEY (uuid_cliente)
-    REFERENCES tb_cliente(uuid_cliente),
-    UUID_VEHICULO INT,
-    CONSTRAINT fk_tb_infoVehiculos
-    foreign key (UUID_VEHICULO)
-    REFERENCES tb_infoVehiculo
-);
