@@ -4,6 +4,13 @@
  */
 package Vista;
 
+
+
+
+import Controlador.crtlLogin;
+import Modelo.Usuario;
+import static Vista.vistaLogin.inivistaLogin;
+
 /**
  *
  * @author Paola
@@ -15,6 +22,14 @@ public class vistaLogin extends javax.swing.JFrame {
      */
     public vistaLogin() {
         initComponents();
+         this.setLocationRelativeTo(this);
+    }
+    
+    public static void inivistaLogin(){
+        Usuario Modelo = new Usuario();
+        vistaLogin Vista = new vistaLogin();
+        crtlLogin controlador = new crtlLogin(Modelo, Vista);
+        Vista.setVisible(true);
     }
 
     /**
@@ -152,7 +167,7 @@ public class vistaLogin extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new vistaLogin().setVisible(true);
+                inivistaLogin();
             }
         });
     }

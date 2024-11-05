@@ -4,17 +4,31 @@
  */
 package Vista;
 
+import Controlador.crtlRegistro;
+import Modelo.Usuario;
+
 /**
  *
  * @author Paola
  */
 public class vistaRegistro extends javax.swing.JFrame {
 
+    public Object vistaLogin;
+
     /**
      * Creates new form vistaRegistro
      */
     public vistaRegistro() {
         initComponents();
+         this.setLocationRelativeTo(this);
+    }
+    
+    public static void initvistaRegistro(){
+        Usuario Modelo = new Usuario();
+        vistaRegistro Vista = new vistaRegistro();
+        crtlRegistro controlador = new crtlRegistro(Modelo, Vista);
+        
+        Vista.setVisible(true);
     }
 
     /**
@@ -27,6 +41,7 @@ public class vistaRegistro extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
+        btnLogin = new javax.swing.JButton();
         btnRegistrar = new com.k33ptoo.components.KButton();
         jLabel9 = new javax.swing.JLabel();
         txtCorreoRegistro = new javax.swing.JTextField();
@@ -51,6 +66,13 @@ public class vistaRegistro extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(75, 186, 238));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        btnLogin.setFont(new java.awt.Font("Segoe UI", 2, 12)); // NOI18N
+        btnLogin.setForeground(new java.awt.Color(255, 255, 255));
+        btnLogin.setText("¿Ya tienes una cuenta?");
+        btnLogin.setBorderPainted(false);
+        btnLogin.setContentAreaFilled(false);
+        jPanel1.add(btnLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 400, -1, 40));
 
         btnRegistrar.setText("Registrar");
         btnRegistrar.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
@@ -161,12 +183,13 @@ public class vistaRegistro extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new vistaRegistro().setVisible(true);
+                initvistaRegistro();
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    public javax.swing.JButton btnLogin;
     public com.k33ptoo.components.KButton btnRegistrar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
@@ -182,9 +205,13 @@ public class vistaRegistro extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     public javax.swing.JTextField txtApellidoRegistro;
-    private javax.swing.JTextField txtContraRegistro;
+    public javax.swing.JTextField txtContraRegistro;
     public javax.swing.JTextField txtCorreoRegistro;
     public javax.swing.JTextField txtEdadRegistro;
     public javax.swing.JTextField txtNombreRegistro;
     // End of variables declaration//GEN-END:variables
+
+    public void initvistaLogin() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
 }
